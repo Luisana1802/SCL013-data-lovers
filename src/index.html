@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers holaa-este es un comentario de prueba</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <select name="" id="ordenarPokedex">
-      <option value="">Ordenalo por</option>
-      <option value="">De la A a la Z</option>
-      <option value="">De la Z a la A</option>
-      <option value="">De mayor a menor</option>
-      <option value="">De menor a mayor</option>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <meta name= "viewport" content= "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dad">
+    <header class="header">
+      <div class="menu">
+        <div class="logo"> <img class="logo" src="logo-pokedata.png">
+        </div>
+        <nav class="nav">
+          <a href="#" id="inicio" >Inicio</a>
+          <a href="#" id="pokedex">Pokedex</a>
+          <a href="#" id="combate">Combate</a>
+        </nav>
+      </div>
+    </header>
+    <section class="welcome">
+      <div class="text-ppal">
+        <h1>Atrapalos ya!</h1>
+        <h2>Guía para uso de Pokémon Go</h2>
+        <h3>Bienvenidos a la Pokedata, en esta página encontraras las cualidades de los 151 pokemones que existen  en la región Kanto. 
+          Podrás saber las características únicas como su tipo y que debilidades de combate tiene cada uno y así elegir al que más se adecue a tí.</h3>
+          <div class="imagen-ppal"> <img class="imagenppal" src="img-ppal.png">
+          </div>
+        </section>
+        
+        
+      </div>
+      <select name="ordenar" id="selectOrdenar">
+        <option>Ordenar por</option>
+        <option value="1" >de la A a Z</option>
+        <option value="2">de la Z a la A</option>
+        <option value="3">del 001 al 151</option>
+        <option value="4">del 151 al 001</option>
+      </select>
+      <section id="listPokedex">
+      </section>
+      
+      <div id="root"></div>
+      <script src="main.js" type="module"></script>
+    </body>
+    </html>
+    
