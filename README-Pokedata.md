@@ -1,4 +1,4 @@
-# PokeData
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/logo-pokedata-readme.png)
 
 Bienvenidos a la **Pokedata**, en esta página se especificaran las cualidades de los 151 pokemones que existen  en la región Kanto, y se podra saber las características únicas como su tipo y que debilidades de combate tiene cada uno y
 La primera parte de la pagina consiste en la **La Pokedex** donde se muestra de forma ordenada los 151 Pokémon que existe en la region Kanto, se presetaran las caracteristicas especificas de cada uno de ellos para que el usuario pueda mejorar y se convierta en un maestro Pokémon en el juego de Pokémon Go.
@@ -40,9 +40,12 @@ Luego de plantearnos lo que sería la primera vista del proyecto, se realizo un 
 
 **Prototipo de alta fidelidad** 🖥
 Ya teniendo las ideas organizadas y basándonos en los anteriores prototipos, se procedió a realizar el de alta fidelidad. Usando una aplicación llamada Figma, dándole la interacción a cada botón y ejecutándolo como un posible producto final a diferentes usuarios.
-* [Propuesta en Figma](https://www.figma.com/proto/FmuPqIeyWnbCvz5LqYywcC/POKEDATA?node-id=1%3A7&viewport=231%2C397%2C0.07990474998950958&scaling=scale-down)
-(aqui la imagen del prototipo).
+* [Enlace de propuesta en Figma](https://www.figma.com/proto/FmuPqIeyWnbCvz5LqYywcC/POKEDATA?node-id=1%3A7&viewport=231%2C397%2C0.07990474998950958&scaling=scale-down)
 
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta01.jpg)
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta02.jpg)
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta03.jpg)
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta04.jpg)
 
 # Historias de usuarios
 Ya teniendo el prototipo de alta fidelidad completo, se procedió a realizar lo que sería el testeo de este prototipo en 4 usuarios. 
