@@ -1,24 +1,74 @@
-<<<<<<< HEAD
-import pokeData from './../src/data/pokemon/pokemon.js';
-console.log(pokeData.pokemon[0]);
-
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-//console.log(example, data);
-=======
-
 import pokeData from './data/pokemon/pokemon.js';
+//console.log(pokeData.pokemon);
 
+//aqui se crea cajaPokedex donde se insertará las caracteristicas de los poke
+var cajaPokedex = document.querySelector("#listPokedex");
+cajaPokedex.innerHTML = "";
 
-//console.log(pokeData.pokemon [115])
+let printInPokemonList =(index) => {
+    //creandoo div para que todas las iteraciones del for se queden agrupadas aqui
+    var divUno = document.createElement("div");
+    divUno.className = "cartas";
+    //agregando imagen
+    var imagem=document.createElement("img");
+    imagem.src = pokeData.pokemon[index].img;
+    divUno.appendChild(imagem);
+    cajaPokedex.appendChild(divUno);
+    //agragendo el numero
+    var numero = document.createElement("number");
+    var number = document.createTextNode(pokeData.pokemon[index].num);
+    divUno.appendChild(number);
+    cajaPokedex.appendChild(divUno);
+    //agragendo el nombre
+    var nombre = document.createElement("p");
+    var texto = document.createTextNode(pokeData.pokemon[index].name);
+    nombre.appendChild(texto);
+    divUno.appendChild(nombre);
+    //agregando array tipo para poder iterar
+    var arrayType = pokeData.pokemon[index].type;
+    //var divuno pot tipo = document.createElement("div");
+    divUno.innerHTML += "<B>Tipo: </B>";
+    for (let indexUno in arrayType) {
+        var parrafoTipo = document.createElement("p");   
+        parrafoTipo.innerHTML = arrayType[indexUno];
+        divUno.appendChild(parrafoTipo);
+    };
+};
+//creating an array without parameters to insert it into the next for
+var arrayName = [];
+//
+for (let index in pokeData.pokemon) {
+    printInPokemonList(index);
+    arrayName.push(pokeData.pokemon[index].name);
+};
+//console.log(arrayName);
+arrayName.sort();
+//console.log(arrayName);
+arrayName.reverse();
+//console.log(arrayName);
+//creating an array without parameters to insert it into the next for
+var arrayNum = [];
+//
+for (let index in pokeData.pokemon) {
+    arrayNum.push(pokeData.pokemon[index].num);
+};
+//ordering pokemon from 151 to 1
+arrayNum.sort();
+//console.log(arrayNum);
+arrayNum.reverse();
+//console.log (arrayNum);
+//adding the dynamic select of the order
 
-const select = document.getElementById ("ordenarPokedex")
+function selectArea() { 
+var selectOrdenar = document.getElementById("selectOrdenar");
+var cambioSelect = selectOrdenar[selectOrdenar.selectedIndex].value;
+console.log(cambioSelect)
+}
+selectArea();
 
-//select.option[select.selectedIndex].tex
+//document.getElementById('selectOrdenar').addEventListener('change',cambioSelect,false);
 
-select.addEventListener("change", () => {
-    let condition = select.option[select.selectedIndex].tex
-})
->>>>>>> 320125230c69e81db13ae11caaa0432e6925243f
+/*function cambioSelect()
+{
+  arrayName(document.getElementById("1").value);
+}*/
