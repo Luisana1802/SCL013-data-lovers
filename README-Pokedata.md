@@ -9,13 +9,16 @@ La segunda parte hace referencia a los mismos pokemones pero ahora se mostraran 
 
 _Para realizar esta pagina se tomaron en cuenta 3 historias de usuario_:
 
-- **Usuario 1**👩
+- **Usuario 1** 👩
+
 Mujer 25 años, no tiene ningún conocimiento de Pókemon, le gustaría ver las imágenes y la característica más básica de los pókemones.
 
-- **Usuario 2**🙋‍♂️
+- **Usuario 2** 🙋‍♂️
+
 Hombre, 35 años le gusta Pókemon pero no ha jugado Pókemon Go.  Le gustaría ver los tipos y las debilidades del Pókemon en la pantalla.
 
-- **Usuario 3**🧑‍💻
+- **Usuario 3** 🧑‍💻
+
 Hombre de 22 años, jugador experto de Pokemon Go. Necesita revisar la Pokedex y las debilidades de cada Pókemon.
 
 
@@ -37,7 +40,7 @@ Luego de plantearnos lo que sería la primera vista del proyecto, se realizo un 
 
 **Prototipo de alta fidelidad** 🖥
 Ya teniendo las ideas organizadas y basándonos en los anteriores prototipos, se procedió a realizar el de alta fidelidad. Usando una aplicación llamada Figma, dándole la interacción a cada botón y ejecutándolo como un posible producto final a diferentes usuarios.
-* [Propuesta](https://www.figma.com/proto/FmuPqIeyWnbCvz5LqYywcC/POKEDATA?node-id=1%3A7&viewport=231%2C397%2C0.07990474998950958&scaling=scale-down)
+* [Propuesta en Figma](https://www.figma.com/proto/FmuPqIeyWnbCvz5LqYywcC/POKEDATA?node-id=1%3A7&viewport=231%2C397%2C0.07990474998950958&scaling=scale-down)
 (aqui la imagen del prototipo).
 
 
