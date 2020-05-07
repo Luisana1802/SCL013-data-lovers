@@ -31,8 +31,9 @@ En este prototipo  se plasmaron las primeras ideas de lo que sería el concepto 
 
 **Prototipo de baja fidelidad**💻
 Luego de plantearnos lo que sería la primera vista del proyecto, se realizo un prototipo de baja fidelidad, el mismo nos muestras las dos ventanas que se quieren mostrar de un principio, como lo es la pokedex y luego los pokemones por tipo y debilidades.
-
-(aqui la imagen del prototipo)
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnBaja01.jpg)
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnBaja02.jpg)
+![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnBaja03.jpg)
 
 **Prototipo de alta fidelidad** 🖥
 Ya teniendo las ideas organizadas y basándonos en los anteriores prototipos, se procedió a realizar el de alta fidelidad. Usando una aplicación llamada Figma, dándole la interacción a cada botón y ejecutándolo como un posible producto final a diferentes usuarios.
