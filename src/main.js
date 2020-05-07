@@ -1,9 +1,15 @@
 import pokeData from './data/pokemon/pokemon.js';
 
+import {orderNum, orderNumReverse,orderName,orderNameReverse} from "./data.js";
+
+
+
+
 
 //aqui se crea cajaPokedex donde se insertará las caracteristicas de los poke
-var cajaPokedex = document.querySelector("#root");
+var cajaPokedex = document.querySelector("#listPokedex");
 cajaPokedex.innerHTML = "";
+
 
 
 let printInPokemonList =(index) => {
@@ -45,50 +51,45 @@ let printInPokemonList =(index) => {
 
 //creating an array without parameters to insert it into the next for
 var arrayName = [];
-
-//
 for (let index in pokeData.pokemon) {
-       
     printInPokemonList(index);
-    
     arrayName.push(pokeData.pokemon[index].name);
-
 };
 
-console.log(arrayName);
+//console.log("1",arrayName);
 
-arrayName.sort();
 
-console.log(arrayName);
-
-arrayName.reverse();
-
-//console.log(arrayName);
 
 //creating an array without parameters to insert it into the next for
 var arrayNum = [];
-
-//
-
 for (let index in pokeData.pokemon) {
-           
     arrayNum.push(pokeData.pokemon[index].num);
-
 };
 
-//ordering pokemon from 151 to 1
-arrayNum.sort();
-console.log(arrayNum);
-arrayNum.reverse();
-console.log (arrayNum);
+let capturarSelect =() => {
+    let valueSelect = document.getElementById("selectOrdenar");
+    let value = valueSelect[valueSelect.selectedIndex].value;
+    
+    console.log(value);
+    if (value=="1") {
+        let nameAZ = orderName(arrayName);
+        //console.log(nameAZ);
+    } else if (value=="2") {
+        let nameZA = orderNameReverse(arrayName);
+        //console.log(nameZA);
+    } else if (value=="3") {
+        let numOrdenado = orderNum(arrayNum);
+        //console.log(numOrdenado)
+    } else if (value=="4") {
+        let umReverse =orderNumReverse(arrayNum);
+        //console.log(umReverse)
+        
+    }
+    
+};
+    
+document.getElementById("selectOrdenar").addEventListener("change", capturarSelect, false);
 
 
-//adding the dynamic select of the order
-function agregarSelect() {
-    var select = '<select id="ordenar" ><option value="uno">Ordenar por</option><option value="dos">De la A a la Z</option><option value="tres">De la Z a la A</option><option value="cuatro">Del 1 al 151</option><option value="cinco">Del 151 al 1</option></select>';
-    document.getElementById('selectOrdenar').innerHTML = select;
-  }
-  agregarSelect();
 
-
- 
+//...........................................................................
