@@ -1,95 +1,69 @@
 import pokeData from './data/pokemon/pokemon.js';
 
-import {orderNum, orderNumReverse,orderName,orderNameReverse} from "./data.js";
+import {sortData} from "./data.js";
 
+const allPokemon = pokeData.pokemon;
 
-
-
-
-//aqui se crea cajaPokedex donde se insertará las caracteristicas de los poke
-var cajaPokedex = document.querySelector("#listPokedex");
-cajaPokedex.innerHTML = "";
-
-
-
-let printInPokemonList =(index) => {
-    
-    //creandoo div para que todas las iteraciones del for se queden agrupadas aqui
-    var divUno = document.createElement("div");
-    divUno.className = "cartas";
-
-    //agregando imagen
-    var imagem=document.createElement("img");
-    imagem.src = pokeData.pokemon[index].img;
-    divUno.appendChild(imagem);
-    cajaPokedex.appendChild(divUno);
-
-    //agragendo el numero
-    var numero = document.createElement("number");
-    var number = document.createTextNode(pokeData.pokemon[index].num);
-    divUno.appendChild(number);
-    cajaPokedex.appendChild(divUno);
-
+let printInPokemonList =(pokemonOrdenado,index) => {
+     // crea un nuevo div 
+  // y añade contenido 
+  
+    let newDiv = document.createElement("div"); 
+    newDiv.className = "cartas"; 
     //agragendo el nombre
-    var nombre = document.createElement("p");
-    var texto = document.createTextNode(pokeData.pokemon[index].name);
-    nombre.appendChild(texto);
-    divUno.appendChild(nombre);
-                    
+    var para = document.createElement("p");
+    var node = document.createTextNode(pokemonOrdenado[index].name);
+    para.appendChild(node);
+    newDiv.appendChild(para)
+    //agregando imagen
+    let imagen=document.createElement("img");
+    imagen.src = pokemonOrdenado[index].img;
+    newDiv.appendChild(imagen);
+    //agragendo el numero
+    var para = document.createElement("p");
+    var node = document.createTextNode(pokemonOrdenado[index].num);
+    para.appendChild(node);
+    newDiv.appendChild(para)
+    
+    //agregando array tipo para poder iterar pokemones por TIPO
+    var arrayType = allPokemon[index].type;
 
-    //agregando array tipo para poder iterar
-    var arrayType = pokeData.pokemon[index].type;
-
-    //var divuno pot tipo = document.createElement("div");
-    divUno.innerHTML += "<B>Tipo: </B>";
+    newDiv.innerHTML += "<B>Tipo: </B>";
     for (let indexUno in arrayType) {
         var parrafoTipo = document.createElement("p");   
         parrafoTipo.innerHTML = arrayType[indexUno];
-        divUno.appendChild(parrafoTipo);
+        newDiv.appendChild(parrafoTipo);
     };
-};
-
-//creating an array without parameters to insert it into the next for
-var arrayName = [];
-for (let index in pokeData.pokemon) {
-    printInPokemonList(index);
-    arrayName.push(pokeData.pokemon[index].name);
-};
-
-//console.log("1",arrayName);
-
-
-
-//creating an array without parameters to insert it into the next for
-var arrayNum = [];
-for (let index in pokeData.pokemon) {
-    arrayNum.push(pokeData.pokemon[index].num);
-};
-
-let capturarSelect =() => {
-    let valueSelect = document.getElementById("selectOrdenar");
-    let value = valueSelect[valueSelect.selectedIndex].value;
     
-    console.log(value);
-    if (value=="1") {
-        let nameAZ = orderName(arrayName);
-        //console.log(nameAZ);
-    } else if (value=="2") {
-        let nameZA = orderNameReverse(arrayName);
-        //console.log(nameZA);
-    } else if (value=="3") {
-        let numOrdenado = orderNum(arrayNum);
-        //console.log(numOrdenado)
-    } else if (value=="4") {
-        let umReverse =orderNumReverse(arrayNum);
-        //console.log(umReverse)
-        
+    // añade el elemento creado y su contenido al DOM 
+    var cajaPokedex = document.getElementById("cajaPokedex"); 
+    cajaPokedex.appendChild(newDiv);
+  };
+
+
+let capturarSelect = () => {
+    let select = document.getElementById("selectOrdenar");
+    var pokemonOrdenado;
+    console.log(select.value);
+    if (select.value == 1){
+        pokemonOrdenado = sortData(allPokemon,"name","a-z");
+    } else if (select.value == 2){
+            pokemonOrdenado = sortData(allPokemon,"name","z-a");
+    } else if (select.value == 3){
+            pokemonOrdenado = sortData(allPokemon,"num","a-z");
+    } else if (select.value == 4){
+            pokemonOrdenado = sortData(allPokemon,"num","z-a");
     }
-    
+    console.log(pokemonOrdenado);
+    var cajaPokedex = document.getElementById("cajaPokedex"); 
+   cajaPokedex.innerHTML = '';
+        for (let index in pokemonOrdenado) {
+            printInPokemonList(pokemonOrdenado,index);
+        }
 };
-    
 document.getElementById("selectOrdenar").addEventListener("change", capturarSelect, false);
 
-
-
-//...........................................................................
+for (let index in allPokemon) {
+    printInPokemonList(allPokemon,index);
+}
+   

@@ -1,23 +1,31 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortData } from '../src/data.js';
 
+describe('sortData', () => {
+  
+  let uno = [
+    {name: "Abra", num: "063"}, {name: "Zubat",num: "041" }, {name: "Zapdos",num: "145"},{name: "Bulbasaur", num: "001" }
+  ];
+  
 
-describe('example', () => {
   test('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
-  test('returns `example`', () => {
-    expect(example()).toBe('example');
+  test('returns the firts pokemon Abra', () => {
+    expect((sortData(uno,"name","a-z"))[0].name).toBe('Abra');
   });
+
+  test('returns the pokemon Zubat', () => {
+  expect((sortData(uno,"name","z-a"))[0].name).toBe('Zubat');
 });
-
-
-describe('anotherExample', () => {
-  test('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  test('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+  test('returns the pokemon Bulbasaur', () => {
+  expect((sortData(uno,"num","a-z"))[0].name).toBe('Bulbasaur');
 });
+test('returns the pokemon Zapdos', () => {
+  expect((sortData(uno,"num","z-a"))[0].name).toBe('Zapdos');
+});
+});
+  
+  
+    
+  
