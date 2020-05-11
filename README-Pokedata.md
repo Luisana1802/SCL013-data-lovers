@@ -43,9 +43,6 @@ Ya teniendo las ideas organizadas y basándonos en los anteriores prototipos, se
 * [Enlace de propuesta en Figma](https://www.figma.com/proto/FmuPqIeyWnbCvz5LqYywcC/POKEDATA?node-id=1%3A7&viewport=231%2C397%2C0.07990474998950958&scaling=scale-down)
 
 ![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta01.jpg)
-![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta02.jpg)
-![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta03.jpg)
-![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta04.jpg)
 
 # Historias de usuarios
 Ya teniendo el prototipo de alta fidelidad completo, se procedió a realizar lo que sería el testeo de este prototipo en 4 usuarios. 
