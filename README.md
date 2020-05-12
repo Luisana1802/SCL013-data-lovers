@@ -8,17 +8,17 @@ La segunda parte hace referencia a los mismos pokemones pero ahora se mostraran 
 
 ## Contenido
 
- - .1 Resumen del proyecto
- - .2 Historias de usuarios
- - .3 Prototipos
-    - 3.1. Prototipo en papel
-    - 3.2. Prototipo de baja fidelidad
-    - 3.3. Prototipo de alta fidelidad
- - .7 Testeo del prototipado
-    - 7.1. Usuario testeo 1
-    - 7.2. Usuario testeo 2
-    - 7.3. Usuario testeo 3
-   - 7.4. Usuario testeo 4
+ - 1.  Resumen del proyecto
+ - 2.  Historias de usuarios
+ - 3.  Prototipos
+        - 3.1. Prototipo en papel
+        - 3.2. Prototipo de baja fidelidad
+        - 3.3. Prototipo de alta fidelidad
+ - 7.   Testeo del prototipado
+        - 7.1. Usuario testeo 1
+        - 7.2. Usuario testeo 2
+        - 7.3. Usuario testeo 3
+        - 7.4. Usuario testeo 4
 
 # 1. Resumen del proyecto
 
@@ -40,17 +40,22 @@ Hombre de 22 años, jugador experto de Pokemon Go. Necesita revisar la Pokedex y
 
 **3.1 Prototipo en papel** 📝
 
+
 En este prototipo  se plasmaron las primeras ideas de lo que sería el concepto principal de la página, el cual es mostrar los pókemones y sus características.
+
 ![Sc3.2reenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/Prototipo.jpeg)
 
 **3.2 Prototipo de baja fidelidad** 💻
 
 Luego de plantearnos lo que sería la primera vista del proyecto, se realizo un prototipo de baja fidelidad, el mismo nos muestras las dos ventanas que se quieren mostrar de un principio, como lo es la pokedex y luego los pokemones por tipo y debilidades.
+
 ![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnBaja.jpg)
+
 
 **3.3 Prototipo de alta fidelidad**  🖥
 
 Ya teniendo las ideas organizadas y basándonos en los anteriores prototipos, se procedió a realizar el de alta fidelidad. Usando una aplicación llamada Figma, dándole la interacción a cada botón y ejecutándolo como un posible producto final a diferentes usuarios.
+
 * [Enlace del prototipo en Figma](https://www.figma.com/proto/FmuPqIeyWnbCvz5LqYywcC/POKEDATA?node-id=1%3A7&viewport=231%2C397%2C0.07990474998950958&scaling=scale-down)
 
 ![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/PrototipoEnAlta.jpg)
