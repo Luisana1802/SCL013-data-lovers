@@ -1,4 +1,4 @@
-*{margin:0; padding:0}
+*{margin:0; padding:0; box-sizing: border-box;}
 .dad {
     display: flex;
     flex-flow: column nowrap;
@@ -9,6 +9,8 @@
     height: 80px;
     width: 100%;
     background: linear-gradient(to bottom, #46E0C3, #E0D1C0);
+    background-position: center;
+    background-size: cover;
 }
 .menu {
     display: flex;
@@ -16,17 +18,30 @@
     height: 80px;
     align-items: center;
   }
+  li {
+      flex: auto;
+      list-style: none;
+      text-align: center;
+  }
   .logo {
       flex: 1 1 auto;
       height: 60px;
   }
+  ul {
+    display: flex;
+  }
   nav{
     flex: 2 1 auto;
     font-size: 1.3em;
-    color: #333333;
-    margin: 0 20px 0 0;
-    padding: 2px 7px 2px 7px;
-   text-decoration: none;
+}
+nav a {
+    text-decoration: none;
+    line-height: 5;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 24px;
+    color: #333;
+    display: block;
 }
 .menu nav a:hover {
     background-color: #46E0C3;
@@ -35,31 +50,36 @@
 body {
     background: whitesmoke;
 }
+body #screenPokemones {
+    background: red;
+}
 .welcome  {
     display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
     background-image: url(bg-ppal-pokedata.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    align-items: center;
 }
 .text-ppal {
     align-items: center;
-    background: whitesmoke;
     flex: 2 1 auto;
     height: 500px;
-    margin-top: 5%;
+    margin-top: 8%;
     margin-left: 10%;
 }
-/*.welcome .imagen-ppal {
-    box-align: center;
-    background: whitesmoke;
+.welcome .imagen-ppal {
     flex: 1 1 auto;
-    height: 300px;
-    margin: 50px;
-}*/
+    height: 500px;
+    margin: 100px;
+    display: flex;
+}
 .cartas {
-    height: 11.375em;
+    height: 14.375em;
     width: 9.375em;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 24px;
     color: teal;
     background-color: #FFFFFF;
     border-radius: 15px;
@@ -71,12 +91,40 @@ body {
     padding: 10px 20px 40px 20px;
     margin: 1.25em
 }
+h4 {
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+}
+h5 {
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+text-align: left;
+}
+h6 {
+    text-align: center;
+background: #FFFFFF;
+margin: 3px 20px 4px;
+overflow: hidden;
+padding: 1px;
+border-radius: 7px;
+border: 2px solid #F7785A;
+}
 .cartas img {
     width: 7em;
     height: 7em;
     display: block;
 }
 #selectOrdenar {
+    margin-left: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 5%;
     width: auto;
     font-size: 1.3em;
     color: white;
@@ -88,6 +136,9 @@ body {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVCAYAAABYHP4bAAACsElEQVRIia2V3U/TUBjGnyF44bf/hZIY78QLL73yyhuvjJFIDAY/IhKWKIkoihAQowElJJsXC4gIGogJUURniEgGInHKnAFRQMiIw320Xbuu7TFnvltgMFZkT9I07enpr8/T9z3Hwhg7AmAfgCAABiBAZ36tAwgD0AAIAGIAcgFYAOym8y4AmwDsoLHtAPIAbAPQC+BzUUE+LDFV3ZOblzcKYAuyKMaYd6C766CjtlIEYOQUH9o/IYtCZZYh2pehd5cctZWbAfADOfy+9ehhmxKRBrMF8v2cst0tLZ6jlCxxkN3lMSKCoLzpbC81DD28UYgsiZ6a08fb6D/L9F9ZDo2rTx/c8c5+817bCIQZhtLT0lQlCeEIFZNAhRSPDtwVgEhV4TGHGAy8+F/QpHus+VWH4wcBQgCidpeHJUEE46UsPrc1l+ma5l8vRAwGRupKCrsASNQiETKAZSCS2t/ZOj35aaycMjYlQ9eFtvrqakPXZXIi2l0ebencZSCyqdSVnOwJLfo7zILcgwMNw/2989TcHKSmPpPqKBGh9Kj+ZkVMjc5kggR+L7xuLD/7kiILpkaWFkSKfXD2+caHBi8yxlZMSkhTVb/tqvU2T4EgIn3oCq0KogijjdZzzkXffEsaDnP19dZ4P474Ka5VI8vkKBlhS0XZragsf00dX5id7n5448p77oLcKIlSXheIpE2NuxdHnX0XmGEkv1ZVlF/3reebqPM5REoXmSlQIkL79cvDvpnpBvxbMA1nV3vV3NRkiCBhWmbWVCZHyVWj7syJe7IkDs9/n3A8aax3U2TLun8t5WZ6gKSHA39C/Y9bS94+a+d3otT9GSNLiO+wpkhFBfnc/VYAO2nnzVgAS+bCcurAXpOm4uJbNt/I+Mt5caTtsVSZjS4h7oQ3p+l1MC4AfwGt53IEiULrBQAAAABJRU5ErkJggg==),linear-gradient(to right,#F7785A 0,#FBCB66 100%);
     background-repeat: no-repeat,repeat;
     background-position: right .7em top 60%,0 0;
+   }
+   select option {
+    color:white; background-color:#46E0C3;
    }
    h1 {
     font-family: Baloo;
@@ -122,3 +173,34 @@ body {
     background-repeat: no-repeat,repeat;
     background-position: right .7em top 60%,0 0;
    }
+   .screenPokemones {
+    display: flex;
+    background-image: url(bg-ppal-pokedata.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    align-items: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.contentModal {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}

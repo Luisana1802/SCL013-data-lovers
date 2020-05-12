@@ -5,7 +5,7 @@ describe('sortData', () => {
   let uno = [
     {name: "Abra", num: "063"}, {name: "Zubat",num: "041" }, {name: "Zapdos",num: "145"},{name: "Bulbasaur", num: "001" }
   ];
-  
+
 
   test('is a function', () => {
     expect(typeof sortData).toBe('function');
