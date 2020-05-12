@@ -1,14 +1,34 @@
 *{margin:0; padding:0; box-sizing: border-box;}
 
+
+
 .dad {
     display: flex;
     flex-flow: column nowrap;
 }
-    
+@media screen and (max-width:600px) {
+    .menu {
+
+    flex-flow: column wrap;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      padding: 2%;
+    }
+    nav {
+        margin: 0 0 20px 0;
+        justify-content: space-between;
+    }
+    .logo {
+       margin-top: 5%;
+  
+    }
+  }
  .header {
     display: flex;
-    flex-flow: column nowrap;
-    height: 80px;
+    flex-wrap: wrap;
+    height: auto;
     width: 100%;
     background: linear-gradient(to bottom, #46E0C3, #E0D1C0);
     background-position: center;
@@ -17,8 +37,7 @@
 
 .menu {
     display: flex;
-    flex-flow: row nowrap;
-    height: 80px;
+    width: 100%;
     align-items: center;
     
   }
@@ -37,12 +56,14 @@
   ul {
 
     display: flex;
+    justify-content: space-around;
   }
 
   nav{
 
-    flex: 2 1 auto;
     font-size: 1.3em;
+    width: 70%;
+    justify-content: flex-end;
 
 }
 nav a {
@@ -52,7 +73,6 @@ nav a {
     font-style: normal;
     font-size: 24px;
     color: #333;
-    display: block;
 }
 
 .menu nav a:hover {
@@ -61,11 +81,9 @@ nav a {
 }
 
 body {
-    background: whitesmoke;
-}
-
-body #screenPokemones {
-    background: red;
+    background-image: url(bg-ppal-body.jpg);
+    background-position: center;
+    background-attachment: contain;
 }
 
 .welcome  {
@@ -89,8 +107,8 @@ body #screenPokemones {
 
 .welcome .imagen-ppal {
     flex: 1 1 auto;
-    height: 500px;
-    margin: 100px;
+    height: auto;
+    margin: auto;
     display: flex;
 }
 
@@ -162,8 +180,9 @@ border: 2px solid #f7785a;
     background-position: right .7em top 60%,0 0;
 
    }
+
    select option {
-    color:red; background-color:yellow;
+    color:white; background-color:#46E0C3;
    }
 
    h1 {
