@@ -59,3 +59,4 @@ POKEDATA(se abre en una pestaña nueva)
 Created with Figma(82 kB)
 https://www.figma.com/file/FmuPqIeyWnbCvz5LqYywcC/thumbnail?ver=thumbnails/09342936-76ae-406c-b999-895c8d716696
 (294 kB)
+ 
