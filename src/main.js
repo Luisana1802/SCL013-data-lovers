@@ -1,15 +1,33 @@
 import pokeData from './data/pokemon/pokemon.js';
 import {sortData} from "./data.js";
+
 //Initial Loading of the Website
 document.getElementById("dad").style.display = "";
 document.getElementById("screenPokemones").style.display = "none";
+
 //Screen Shift towards Pokemon
 let capturar = () => {
     document.getElementById("dad").style.display = "none";
     document.getElementById("screenPokemones").style.display = "";
   };
   document.getElementById("btnComenzar").addEventListener("click", capturar);
-const allPokemon = pokeData.pokemon;
+
+  //Retorna con boton Inicio
+let volverPrincipio = () => {
+    document.getElementById("dad").style.display = "";
+    document.getElementById("screenPokemones").style.display = "none";
+  };
+  document.getElementById("inicio").addEventListener("click", volverPrincipio, false);
+
+    //Retorna con boton POKEDEX
+let irPokedex = () => {
+    document.getElementById("dad").style.display = "none";
+    document.getElementById("screenPokemones").style.display = "";
+  };
+  document.getElementById("pokedex").addEventListener("click", irPokedex, false);
+
+
+  const allPokemon = pokeData.pokemon;
 var pokemonOrdenado;
 
 
