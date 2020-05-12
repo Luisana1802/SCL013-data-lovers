@@ -3,6 +3,30 @@
     display: flex;
     flex-flow: column nowrap;
 }
+@font-face {
+    font-family:'Baloo';
+    src: url('tipos/Baloo_2/Baloo2-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:'Baloo';
+    src: url('tipos/Baloo_2/Baloo2-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:'Roboto';
+    src: url('tipos/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:'Roboto';
+    src: url('tipos/Roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }
 @media screen and (max-width:600px) {
     .menu {
     flex-flow: column wrap;
@@ -42,6 +66,7 @@
   .logo {
       flex: 1 1 auto;
       height: 60px;
+      margin-left: 5%;
   }
   ul {
     display: flex;
@@ -55,8 +80,8 @@
 nav a {
     text-decoration: none;
     line-height: 5;
-    font-family: Lato;
-    font-style: normal;
+    font-family: Roboto;
+    font-style: Lighter;
     font-size: 24px;
     color: #333;
 }
@@ -108,14 +133,13 @@ body {
     margin: 1.25em
 }
 h4 {
-    font-family: Lato;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 21px;
 }
 h5 {
-    font-family: Lato;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -124,12 +148,15 @@ h5 {
 }
 h6 {
     text-align: center;
-background: #FFFFFF;
-margin: 3px 20px 4px;
-overflow: hidden;
-padding: 1px;
-border-radius: 7px;
-border: 2px solid #F7785A;
+    background: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    margin: 3px 20px 4px;
+    overflow: hidden;
+    padding: 1px;
+    border-radius: 7px;
+    border: 2px solid #F7785A;
 }
 .cartas img {
     width: 7em;
@@ -157,26 +184,26 @@ border: 2px solid #F7785A;
     color:white; background-color:#46E0C3;
    }
    h1 {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Baloo';
+    font-weight: bold;
     font-size: 64px;
     line-height: 101px;
     display: block;
    }
    h2 {
-    font-family: Lato;
+    font-family: 'Baloo';
     font-style: normal;
     font-weight: 300;
     font-size: 36px;
     line-height: 57px;
    }
    h3 {
-    font-family: Helvetica;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
+    margin-inline-end: 10%;
    }
    #btnComenzar {
     width: auto;
@@ -225,4 +252,3 @@ font-size: 18px;
 line-height: 21px;
 color: teal;
 }
-
