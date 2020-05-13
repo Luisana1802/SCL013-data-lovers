@@ -33,23 +33,69 @@
         <div class="imagen-ppal"> <img class="imagenppal" src="img-ppal.png"></div>
       </section>
     </div>
-    <div id="screenPokemones">
-      <div id="modal" class="modal">
-        <div id="contentModal" class="contentModal" ></div>
+    <div id=botonesDataPadre>
+      <div id= botonDataHijo>
+        <div id="screenPokemones">
+        <div id="modal" class="modal">
+          <div id="contentModal" class="contentModal" ></div>
+        </div>
+        <select name="ordenar" id="selectOrdenar">
+          <option value="">Ordena por</option>
+          <option value="1" >de la A a Z</option>
+          <option value="2">de la Z a la A</option>
+          <option value="3">del 001 al 151</option>
+          <option value="4">del 151 al 001</option>
+        </select>
+        <select name="filtrar" id="selectFiltrar">
+          <option value="">Filtrar por tipo</option>
+          <option value="todos">Todos los tipos</option>
+          <option value="Water">Water</option>
+          <option value="Fire">Fire</option>
+          <option value="Flying">Flying</option>
+          <option value="Psychic">IcPsychice</option>
+          <option value="Ground">Ground</option>
+          <option value="Rock">Rock</option>
+          <option value="Electric">Electric</option>
+          <option value="Grass">Grass</option>
+          <option value="Bug">Bug</option>
+          <option value="Ice">Ice</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Poison">Poison</option>
+          <option value="Ghost">Ghost</option>
+          <option value="Dragon">Dragon</option>
+          <option value="Dark">Dark</option>
+          <option value="Steel">Steel</option>
+          <option value="Normal">Normal</option>
+        </select>
+        <select name="filtrarDebilidades" id="selectFiltrarDebilidades">
+          <option value="">Filtrar por Debilidad</option>
+          <option value="todosDebilidades">Todas las debilidades</option>
+          <option value="Water">Water</option>
+          <option value="Fire">Fire</option>
+          <option value="Flying">Flying</option>
+          <option value="Psychic">IcPsychice</option>
+          <option value="Ground">Ground</option>
+          <option value="Rock">Rock</option>
+          <option value="Electric">Electric</option>
+          <option value="Grass">Grass</option>
+          <option value="Bug">Bug</option>
+          <option value="Ice">Ice</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Poison">Poison</option>
+          <option value="Ghost">Ghost</option>
+          <option value="Dragon">Dragon</option>
+          <option value="Dark">Dark</option>
+          <option value="Steel">Steel</option>
+          <option value="Fairy">Fairy</option>
+        </select>
+        </div>
       </div>
-      <select name="ordenar" id="selectOrdenar">
-        <option value="">Ordena por</option>
-        <option value="1" >de la A a Z</option>
-        <option value="2">de la Z a la A</option>
-        <option value="3">del 001 al 151</option>
-        <option value="4">del 151 al 001</option>
-      </select>
+    </div>
       <section id="listPokedex">
         <div id="cajaPokedex"></div>
       </section>
       <script src="main.js" type="module"></script>
     </div>
-  </div>
   </body>
   </html>
 
