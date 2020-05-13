@@ -1,6 +1,6 @@
 ![ScreenShot](https://raw.githubusercontent.com/Dominique-Rubilar/SCL013-data-lovers/master/logo-pokedata-readme.png)
 
-Bienvenidos a la **Pokedata**, en esta página se especificaran las cualidades de los 151 pokemones que existen  en la región Kanto, y se podra saber las características únicas como su tipo y que debilidades de combate tiene cada uno y
+Bienvenidos a la **Pokedata**, en esta página se especificaran las cualidades de los 151 pokemones que existen  en la región Kanto, y se podra saber las características únicas como su tipo y que debilidades de combate tiene cada uno.
 La primera parte de la pagina consiste en la **La Pokedex** donde se muestra de forma ordenada los 151 Pokémon que existe en la region Kanto, se presetaran las caracteristicas especificas de cada uno de ellos para que el usuario pueda mejorar y se convierta en un maestro Pokémon en el juego de Pokémon Go.
 La segunda parte hace referencia a los mismos pokemones pero ahora se mostraran según las **Debilidades y El Tipo**. El usuario podrá elegir que pókemon que se adecue a él.
 
