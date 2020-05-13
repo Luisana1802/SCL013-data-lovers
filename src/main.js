@@ -19,6 +19,7 @@ let volverPrincipio = () => {
   };
   document.getElementById("inicio").addEventListener("click", volverPrincipio, false);
 
+  
     //Retorna con boton POKEDEX
 let irPokedex = () => {
     document.getElementById("dad").style.display = "none";
@@ -32,6 +33,7 @@ var pokemonOrdenado;
 
 
 let printInPokemonList =(pokemonOrdenado,index) => {
+
      // crea un nuevo div
   // y añade contenido
     let newDiv = document.createElement("div");
@@ -62,8 +64,10 @@ let printInPokemonList =(pokemonOrdenado,index) => {
     // añade el elemento creado y su contenido al DOM
     var cajaPokedex = document.getElementById("cajaPokedex");
     cajaPokedex.appendChild(newDiv);
-    //createModal();
+    
+    createModal();
   };
+  
 
   //ordenar pokemones
 
@@ -134,11 +138,15 @@ document.getElementById("selectFiltrar").addEventListener("change", capturarSele
 document.getElementById("selectFiltrarDebilidades").addEventListener("change", capturarSelectFiltrarDebilidades, false);
 
 
-for (let index in allPokemon) {
-    pokemonOrdenado = allPokemon;
-    printInPokemonList(allPokemon,index);
-    console.log("pokemon for");
+
+let inicioPokedex = () => {
+    for (let index in allPokemon) {
+        pokemonOrdenado = allPokemon;
+        printInPokemonList(allPokemon,index);
+        console.log("pokemon for");
+    }
 }
+document.getElementById("btnComenzar").addEventListener("click", inicioPokedex, false);
 
 
 //creating the modal
@@ -170,7 +178,8 @@ function createModal (){
 
                                             </div>
                                         </div>
-                                    `;
+                                    `
+                                    ;
        
             
         })
