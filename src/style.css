@@ -270,6 +270,7 @@ h3 {
 }
 
 .screenPokemones {
+    display: flex;
     background-image: url(bg-ppal-body.jpg);
     background-position: center;
     background-attachment: contain;
