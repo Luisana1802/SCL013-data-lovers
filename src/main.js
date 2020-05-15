@@ -4,6 +4,7 @@ import {sortData,filterData,filterDataDebilidades} from "./data.js";
 document.getElementById("dad").style.display = "";
 document.getElementById("screenPokemones").style.display = "none";
 document.getElementById("CombatePokemon").style.display = "none";
+document.getElementById("modal").style.display = "none";
 //boton conoce tus pokemones
 let capturar = () => {
     document.getElementById("dad").style.display = "none";
@@ -146,7 +147,7 @@ let inicioPokedex = () => {
         console.log("pokemon for");
     }
 }
-document.getElementById("btnComenzar").addEventListener("click", inicioPokedex,);
+document.getElementById("btnComenzar").addEventListener("click", inicioPokedex,false);
 //creating the modal
 function createModal (){
     let modal = document.getElementById("modal");
