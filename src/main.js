@@ -1,37 +1,61 @@
 import pokeData from './data/pokemon/pokemon.js';
 import {sortData,filterData,filterDataDebilidades} from "./data.js";
 
-//Initial Loading of the Website
+//carga inicial de la pagina
 document.getElementById("dad").style.display = "";
 document.getElementById("screenPokemones").style.display = "none";
+document.getElementById("CombatePokemon").style.display = "none";
+document.getElementById("modal").style.display = "none";
 
-//Screen Shift towards Pokemon
+
+//boton conoce tus pokemones
 let capturar = () => {
     document.getElementById("dad").style.display = "none";
     document.getElementById("screenPokemones").style.display = "";
+    document.getElementById("CombatePokemon").style.display = "none";
+    cajaPokedex.innerHTML = '';
   };
+  
+  
   document.getElementById("btnComenzar").addEventListener("click", capturar);
 
-  //Retorna con boton Inicio
+  // boton Inicio
 let volverPrincipio = () => {
     document.getElementById("dad").style.display = "";
     document.getElementById("screenPokemones").style.display = "none";
+    document.getElementById("CombatePokemon").style.display = "none";
+    cajaPokedex.innerHTML = '';
   };
-  document.getElementById("inicio").addEventListener("click", volverPrincipio, false);
+
+
+  document.getElementById("inicio").addEventListener("click", volverPrincipio);
 
   
-    //Retorna con boton POKEDEX
+    // boton POKEDEX
 let irPokedex = () => {
     document.getElementById("dad").style.display = "none";
     document.getElementById("screenPokemones").style.display = "";
+    document.getElementById("CombatePokemon").style.display = "none";
+    inicioPokedex();
   };
-  document.getElementById("pokedex").addEventListener("click", irPokedex, false);
+ 
+  document.getElementById("pokedex").addEventListener("click", irPokedex);
 
 
+      // boton combate
+let irCombate = () => {
+    document.getElementById("dad").style.display = "none";
+    document.getElementById("screenPokemones").style.display = "none";
+    document.getElementById("CombatePokemon").style.display = "";
+    inicioPokedex();
+  };
+ 
+  document.getElementById("combate").addEventListener("click", irCombate);
+//creando la constante que tiene la data
 const allPokemon = pokeData.pokemon;
 var pokemonOrdenado;
 
-
+//creando el contenido que tiene cada carta pokemon
 let printInPokemonList =(pokemonOrdenado,index) => {
 
      // crea un nuevo div
@@ -66,7 +90,8 @@ let printInPokemonList =(pokemonOrdenado,index) => {
     cajaPokedex.appendChild(newDiv);
     
     createModal();
-  };
+
+   };
   
 
   //ordenar pokemones
@@ -138,15 +163,16 @@ document.getElementById("selectFiltrar").addEventListener("change", capturarSele
 document.getElementById("selectFiltrarDebilidades").addEventListener("change", capturarSelectFiltrarDebilidades, false);
 
 
-
+//pintar los pokemones en el DOM
 let inicioPokedex = () => {
+    cajaPokedex.innerHTML = '';
     for (let index in allPokemon) {
         pokemonOrdenado = allPokemon;
         printInPokemonList(allPokemon,index);
         console.log("pokemon for");
     }
 }
-document.getElementById("btnComenzar").addEventListener("click", inicioPokedex, false);
+document.getElementById("btnComenzar").addEventListener("click", inicioPokedex,false);
 
 
 //creating the modal
@@ -156,7 +182,7 @@ function createModal (){
     let imagenButon = document.getElementsByClassName ("pokeImagenes");
     modal.style.display = "none";
     
-    for (let i=0; i< imagenButon.length; i++){
+        for (let i=0; i< imagenButon.length; i++){
         let imagen = imagenButon[i];
     
         imagen.addEventListener('click', () => {
