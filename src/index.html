@@ -18,6 +18,9 @@
         </ul>
       </nav>
     </div>
+    <div id="modal" class="modal">
+      <div id="contentModal" class="contentModal"></div>
+    </div>
   </header>
 </head>
 <body>
@@ -31,15 +34,16 @@
           Podrás saber las características únicas como su tipo y que debilidades de combate tiene cada uno y así elegir
           al que más se adecue a tí. </h3>
           <br>
-          <button id="btnComenzar">Comenzar</button>
+          <button id="btnComenzar">Descubre tus Pokemones!</button>
         </class>
         <div class="imagen-ppal"> <img class="imagenppal" src="img-ppal.png"></div>
       </section>
     </div>
     <div id="screenPokemones">
-      <div id="modal" class="modal">
-        <div id="contentModal" class="contentModal"></div>
-      </div>
+      <h1>Pokedex</h1>
+      <h3>Aquí se muestra de forma ordenada los 151 Pokémon que existe en la region Kanto.
+        Podras ver las caracteristicas especificas de cada uno de ellos para que te conviertas
+        en un verdadero maestro Pokémon </h3>
       <select name="ordenar" id="selectOrdenar">
         <option value="">Ordena por</option>
         <option value="1">de la A a Z</option>
@@ -47,8 +51,13 @@
         <option value="3">del 001 al 151</option>
         <option value="4">del 151 al 001</option>
       </select>
+    </div>
+    <div class="ScreenCombate" id="CombatePokemon">
+      <h1>¡Combate!</h1>
+      <h3>Ahora podrás saber a qué tipo pertenece el Pokemon que buscas, y saber que daño puede infligir a tu rival o de qué manera te puede debilitar en el caso de que sea más fuerte o efectivo en un combate.
+        ¿¡Estás Listo para convertirte en un maestro Pokemon!? </h3>
       <select name="filtrar" id="selectFiltrar">
-        <option value="">Filtrar por tipo</option>
+        <option value="">Tipo: Pokémon</option>
         <option value="todos">Todos los tipos</option>
         <option value="Water">Water</option>
         <option value="Fire">Fire</option>
@@ -69,7 +78,7 @@
         <option value="Normal">Normal</option>
       </select>
       <select name="filtrarDebilidades" id="selectFiltrarDebilidades">
-        <option value="">Filtrar por Debilidad</option>
+        <option value="">Debilidad: Pokémon</option>
         <option value="todosDebilidades">Todas las debilidades</option>
         <option value="Water">Water</option>
         <option value="Fire">Fire</option>
@@ -90,10 +99,8 @@
         <option value="Fairy">Fairy</option>
       </select>
     </div>
-    <section id="listPokedex"></section>
     <div id="cajaPokedex"></div>
-  </section>
-  <script src="main.js" type="module"></script>
-</div>
+    <script src="main.js" type="module"></script>
+  </div>
 </body>
 </html>
