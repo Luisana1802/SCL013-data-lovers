@@ -49,17 +49,17 @@ let irCombate = () => {
     document.getElementById("CombatePokemon").style.display = "";
     inicioPokedex();
   };
- 
   document.getElementById("combate").addEventListener("click", irCombate);
+
 //creando la constante que tiene la data
 const allPokemon = pokeData.pokemon;
+// se crea pokemonOrdenado parapoder cambiarla en otras funciones del codigo (variable global )
 var pokemonOrdenado;
 
 //creando el contenido que tiene cada carta pokemon
 let printInPokemonList =(pokemonOrdenado,index) => {
 
-     // crea un nuevo div
-  // y añade contenido
+     // crea un nuevo div y añade contenido
     let newDiv = document.createElement("div");
     newDiv.className = "cartas";
     //agragendo el nombre
@@ -94,14 +94,14 @@ let printInPokemonList =(pokemonOrdenado,index) => {
    };
   
 
-  //ordenar pokemones
-
+  //ordenar pokemones capturar select ordenar
 let capturarSelect = () => {
     let select = document.getElementById("selectOrdenar");
     //var pokemonOrdenado;
     console.log(select.value);
     var pokemonUse = [];
-    if (pokemonOrdenado.length > 0){
+    //si el arreglo pokemonOrdenado tiene elementos usare  pokemonOrdenado y allPokemon
+    if (pokemonOrdenado.length > 0){ 
         pokemonUse = pokemonOrdenado
     } else {
         pokemonUse = allPokemon
@@ -125,7 +125,6 @@ let capturarSelect = () => {
 //filtrar por tipo
 let capturarSelectFiltrar = () => {
     let select = document.getElementById("selectFiltrar");
-    //var pokemonOrdenado;
     console.log(select.value);
 
     if(select.value == "todos"){
@@ -143,7 +142,6 @@ let capturarSelectFiltrar = () => {
 //filtrar por debilidad
 let capturarSelectFiltrarDebilidades = () => {
     let select = document.getElementById("selectFiltrarDebilidades");
-    //var pokemonOrdenado;
     console.log(select.value);
 
     if(select.value == "todosDebilidades"){
